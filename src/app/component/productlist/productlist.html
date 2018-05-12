@@ -1,0 +1,9 @@
+  <div class="container-fluid">
+    <div class="row">
+
+     	<product *ngFor="let product of listProducts" [product]="product" (cartChange)="cartChanged($event)" ></product>       
+
+    </div>
+  </div>
+
+ 

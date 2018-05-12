@@ -1,0 +1,18 @@
+ <div class="col-sm-3 col-md-3 product_border">
+
+    <h5 class="product_title">{{product.title}}</h5>
+    <img  [src]="product.image" onError="this.src='assets/img/paint.jpg'"   alt="Kodak Brownie Flash B Camera"   class="image-responsive img"  />
+    
+    <div class="row">
+      <div class="col-md-6">
+        <p><b>$ {{product.price}}</b></p>
+      </div>
+      <div class="col-md-6">
+        <button *ngIf="product.cart"   class="btn btn-primary disable_cart" >Add to Cart</button>
+        <button *ngIf="!product.cart"  (click)="addCart()"  class="btn btn-primary" >Add to Cart</button>
+
+        
+      </div>
+    </div>
+
+</div>
